@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.property.mgt.domain.Client;
 
 @Repository
-public interface ClientRepository extends CrudRepository<Client, int> {
+public interface ClientRepository extends CrudRepository<Client, Long> {
 
 }

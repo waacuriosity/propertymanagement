@@ -10,16 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
-
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
-public  abstract class Client {
-	
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Client {
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private long clientId;
-	
+
 	private Date startDate;
 
 	public long getClientId() {
@@ -37,6 +36,5 @@ public  abstract class Client {
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
-	
-	
+
 }

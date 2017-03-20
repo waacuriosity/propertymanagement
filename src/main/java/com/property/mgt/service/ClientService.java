@@ -6,6 +6,8 @@ import com.property.mgt.domain.Client;
 
 public interface ClientService {
 
-	private List<Client> findAll();
+	List<Client> findAll();
+
+	void save(Client client);
 
 }
