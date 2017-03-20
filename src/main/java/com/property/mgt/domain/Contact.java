@@ -1,13 +1,26 @@
 package com.property.mgt.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Contact {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long contactId;
 	private String email;
 	private String phone;
 	private String city;
 	private String state;
 	private String zipCode;
+	
+	public Contact(){
+		
+	}
 	
 	public long getContactId() {
 		return contactId;
