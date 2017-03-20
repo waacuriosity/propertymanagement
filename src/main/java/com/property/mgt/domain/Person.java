@@ -2,13 +2,30 @@ package com.property.mgt.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
+
+@Entity
+@Inheritance(strategy=InheritanceType.JOINED)
 public abstract class Person {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="person_id")
 	private long personId;
 	private String firstName;
 	private String lastName;
 	private String sex;
 	private Date birthDate;
+	
+	@OneToOne(fetch=FetchType.EAGER)
 	private Contact contact;
 	
 	public long getPersonId() {
