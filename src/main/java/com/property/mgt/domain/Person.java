@@ -25,8 +25,12 @@ public abstract class Person {
 	private String sex;
 	private Date birthDate;
 	
-	@OneToOne(fetch=FetchType.EAGER)
+	@OneToOne(fetch=FetchType.LAZY)
 	private Contact contact;
+	
+	public Person(){
+		
+	}
 	
 	public long getPersonId() {
 		return personId;

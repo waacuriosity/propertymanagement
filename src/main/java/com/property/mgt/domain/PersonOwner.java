@@ -1,18 +1,27 @@
 package com.property.mgt.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@PrimaryKeyJoinColumn(name="person_id")
-public class PersonOwner extends Person {
+public class PersonOwner extends Owner {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long personOwnerId;
+	
+	@OneToOne(fetch=FetchType.EAGER ,cascade=CascadeType.ALL)
+	private Person person;
+	
+	public PersonOwner(){
+		
+	}
 
 	public long getPersonOwnerId() {
 		return personOwnerId;
