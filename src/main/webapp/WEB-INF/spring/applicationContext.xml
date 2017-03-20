@@ -34,11 +34,7 @@
  	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-<<<<<<< HEAD
 		<property name="url" value="jdbc:mysql://localhost:8889/propertymanagement" />
-=======
-		<property name="url" value="jdbc:mysql://localhost:8889/propertymgt" />
->>>>>>> 31f6a65451776b70db697adb72c447e6adac9618
 		<property name="username" value="root" />
 		<property name="password" value="root" />
 	</bean>
