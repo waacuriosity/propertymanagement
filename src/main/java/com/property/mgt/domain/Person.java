@@ -13,12 +13,11 @@ import javax.persistence.InheritanceType;
 import javax.persistence.OneToOne;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
 public abstract class Person {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="person_id")
+	@Column(name="id")
 	private long personId;
 	private String firstName;
 	private String lastName;

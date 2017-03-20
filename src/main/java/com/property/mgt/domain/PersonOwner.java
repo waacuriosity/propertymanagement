@@ -1,6 +1,7 @@
 package com.property.mgt.domain;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,6 +15,7 @@ public class PersonOwner extends Owner {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id")
 	private long personOwnerId;
 	
 	@OneToOne(fetch=FetchType.EAGER ,cascade=CascadeType.ALL)

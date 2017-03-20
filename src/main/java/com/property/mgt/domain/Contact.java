@@ -11,6 +11,7 @@ public class Contact {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id")
 	private long contactId;
 	private String email;
 	private String phone;
