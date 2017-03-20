@@ -1,0 +1,1 @@
+<p>&copy; Copyright Curiosity 2017</p>
